@@ -2,7 +2,7 @@ name: Sync Fork From DangKyToHop Repo
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes
+    - cron: '0 0 * * *' # Runs at 7:00 AM every day
   workflow_dispatch:
 
 jobs:
