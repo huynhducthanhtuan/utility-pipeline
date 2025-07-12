@@ -9,12 +9,10 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone forked repo
+      - name: Sync fork repo
         run: |
           git clone https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/huynhducthanhtuan/DangKyToHop.git
           cd DangKyToHop
-      - name: Sync update from original repo
-        run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git remote add upstream https://github.com/hiengianguyen/DangKyToHop.git
